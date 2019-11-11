@@ -19,6 +19,7 @@ const connect = function() {
     console.log(data);
   });
   conn.write('Name: BAL');
+  //setInterval(function(){ conn.write('Move: up'); }, 50);
 
   return conn;
 }
