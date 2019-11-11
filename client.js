@@ -1,5 +1,9 @@
 const net = require('net');
 
+let successfulConn = function() {
+  return "Successfully connected to game server"
+}
+
 /**
  * Establishes connection with the game server
  */
@@ -11,8 +15,10 @@ const connect = function() {
   // interpret incoming data as text
   conn.setEncoding('utf8'); 
   conn.on('data', (data) => {
+    console.log(successfulConn());
     console.log(data);
   });
+  conn.write('Name: BAL');
 
   return conn;
 }
