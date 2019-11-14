@@ -11,7 +11,9 @@ const handleUserInput = function(command) {
     connection.write('Move: down');
   } if (command === 'd') {
     connection.write('Move: right');
-  };
+  } if (command === 'm') {
+    connection.write('Say: I am going to win!');
+  }
 };
 
 /**
